@@ -1,27 +1,97 @@
+@font-face {
+  font-family: Meslo;
+  src: url(MesloLGM-Regular.ttf);
+}
+
 html {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Meslo', monospace;
     color: #f8f8f2;
     background-color: #282a36;
+    
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	margin: 0;
+}
+
+body {
+	/*max-width: 800px;
+	margin: auto;
+	margin-top: 100px;*/
+	
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+				                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+h2 {
+	margin-top: 80px;
+	margin-left: -100px;
+}
+
+
+#preIcon:before {
+	color: #FF6E67;
+	content: "\FBE";
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	font-size: 12px;
+	display:inline-block;
+	height: 20px;
+	line-height: 20px;
+}
+
+#display {
+	opacity: 1;
+	transition: all 0.4s;
+}
+
+#display.hide {
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+#greeting {
+	color: #CAA9FA;
+	font-weight: bold;
+	font-size: 23px;
+}
+
+#clock {
+	font-weight: bold;
+	font-size: 40px;
 }
 
 a:link {
 	text-decoration: none;
 	color: #f8f8f2;
 }
-
-a:hover {
-	text-decoration: none;
-	color: #ff6e67;
-    
-    animation: 0.4s shake infinite alternate; 
-    display: inline-block;
-}
-
 a:visited {
 	text-decoration: none;
 	color: #f8f8f2;
 }
+a:hover {
+	text-decoration: none;
+	transition: color 0.2s ease;
+	color: #ff6e67;
+    
+    /*animation: 0.4s shake infinite alternate;*/ 
+    display: inline-block;
+}
 
+.shakeLink:hover {
+	animation: 0.4s shake infinite alternate;
+}
 
 .shaking {
     /* Start the shake animation and make the animation last for 0.5 seconds */
