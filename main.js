@@ -71,15 +71,8 @@ function fade(content) {
     }, 150);
 }
 
-function hoverSetup() {
-	/**var mediaLis = document.getElementById("Media").getElementsByTagName("li");
-	
-	for (let i = 0; i < mediaLis.length; i++) {
-		alert(mediaLis[i].getElementsByTagName("a")[0].innerHTML);
-	}**/
-	
-	let media = document.getElementById("media");
-	media.addEventListener("mouseover", function(event) {
+function hoverSetup() {	
+	document.body.addEventListener("mouseover", function(event) {
 		if (event.target.tagName == "A") {
 			let name = event.target.innerHTML;
 			/*document.getElementById("display").innerHTML = name; */
@@ -87,16 +80,16 @@ function hoverSetup() {
 		}
 	}, false);
 	
-	media.addEventListener("mouseout", function(event) {
+	document.body.addEventListener("mouseout", function(event) {
 		if (event.target.tagName == "A") {
 			fade("");
 		}
 	}, false);
 }
 
-window.onload = function() {
+window.addEventListener("load", function() {
     document.getElementById("greeting").textContent = buildMsg();
     startTime();
     hoverSetup();
-}
+});
 

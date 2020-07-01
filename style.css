@@ -29,15 +29,44 @@ body {
 				                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-h2 {
-	margin-top: 80px;
-	margin-left: -100px;
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+.grid-container > div {
+	text-align: center;
+	font-size: auto;
+	
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+}
+
+.preIcon:before {
+	color: #FF6E67;
+	content: "\FBE";
 }
 
 
-#preIcon:before {
-	color: #FF6E67;
-	content: "\FBE";
+#launch {
+	margin: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#media {
+	margin: auto;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#other {
+	margin: auto;
+	display: inline-block;
+	vertical-align: top;
 }
 
 ul {
