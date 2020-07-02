@@ -29,30 +29,8 @@ body {
 				                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 10px;
-	padding: 10px;
-}
-
-.grid-container > div {
-	text-align: center;
-	font-size: auto;
-	
-	display: flex;
-	justify-content: center; /* align horizontal */
-	align-items: center; /* align vertical */
-}
-
-.preIcon:before {
-	color: #FF6E67;
-	content: "\FBE";
-}
-
-
-#launch {
-	margin: 100px;
+#streaming {
+	margin: auto;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -140,4 +118,61 @@ a:hover {
   80% { transform: translate(-1px, -2px) rotate(1deg); }
   90% { transform: translate(1px, 3px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+.grid-container > div {
+	text-align: center;
+	font-size: auto;
+	
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+}
+
+.quote {
+  position: relative;
+  width: 50rem;
+  height: 15rem;
+  color: #4C566A;
+  -webkit-animation: showUp 1s;
+          animation: showUp 1s; }
+  .quote::before {
+    position: absolute;
+    content: attr(data-quote-sign);
+    font-size: 6rem;
+    left: -8rem;
+    top: -4rem;
+    -webkit-animation: showUp 2s;
+            animation: showUp 2s; }
+  .quote-content {
+    display: block;
+    font-size: 1.8rem;
+    text-align: center; }
+  .quote-author {
+    display: block;
+    font-size: 1.3rem;
+    text-align: right;
+    margin-top: 2rem; }
+    .quote-author::before {
+      content: '-';
+      margin-right: 1rem; }
+
+.preIcon:before {
+	color: #FF6E67;
+	content: "\FBE";
+}
+
+
+#launch {
+	margin: 100px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
 }
